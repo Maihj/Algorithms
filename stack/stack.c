@@ -11,7 +11,7 @@ int top = -1;
 /* Implement the stack by array. */
 int main(){
     int stack[10];
-    int i, value;
+    int i, value, choice;
 
     /* Initialize the stack. */
     for (i = 0; i < 10; i++)
@@ -19,36 +19,39 @@ int main(){
 
     printf("---------------------------------------------\n            Stack\n---------------------------------------------\n");
     
-    while (1){
-	printf("Please enter your choice:\n");
-	printf("1.Insert an element.\n");
+    while (choice != 5){
+	printf("\n1.Insert an element.\n");
 	printf("2.Delete an element.\n");
 	printf("3.Print the stack.\n");
 	printf("4.Clear the screen.\n");
-    
-	scanf("%d", &i);
+	printf("5.Exit.\n");
+    	printf("Please enter your choice: ");
+	scanf("%d", &choice);
 	
-	switch(i){
+	switch(choice){
 	case 1:
 	     printf("Please enter a value: ");
 	     scanf("%d", &value);
 	     push(stack, value);
-	     printf("The value you inserted was %d.\n\n", value);
+	     printf("The value you inserted was %d.\n", value);
 	     break;
 
 	case 2:
-	    printf("The value you deleted was %d.\n\n", pop(stack));
+	    printf("The value you deleted was %d.\n", pop(stack));
 	    break;
 
 	case 3:
 	    printf("The values in the stack are: ");
 	    for (i = 0; i < 10; i++)
 		printf("%d ", stack[i]);
-	    printf("\n\n");
+	    printf("\n");
 	    break;
 
 	case 4:
 	    system("clear");
+	    break;
+
+	case 5:
 	    break;
 	}
     }
