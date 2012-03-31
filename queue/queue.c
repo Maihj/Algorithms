@@ -60,6 +60,8 @@ int main(){
 	    break;
 	}
     }
+
+    return 0;
 }
 
 void enqueue(int queue[LENGTH], int value){
