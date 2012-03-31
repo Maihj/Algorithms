@@ -8,33 +8,33 @@ void enqueue(int queue[LENGTH], int value);
 /* Delete a value from the queue. */
 int dequeue(int queue[LENGTH]);
 /* When the queue is empty. */
-int head = 0, tail = 0;
+int head = (LENGTH - 1) / 2, tail = (LENGTH - 1) / 2;
 
 /* Implement the queue by array. */
 int main(){
     int queue[LENGTH];
-    int value, i;
+    int value, i, choice;
     
     /* Initialize the queue. */
     for (i = 0; i < LENGTH; i++)
 	queue[i] = 0;
     
     printf("------------------------------\n           Queue\n------------------------------\n");
-    while (1){
-	printf("1.Insert a value.\n");
+    while (choice != 5){
+	printf("\n1.Insert a value.\n");
 	printf("2.Delete a value.\n");
 	printf("3.Show the current queue.\n");
 	printf("4.Clean the screen.\n");
 	printf("5.Exit.\n");
 	printf("Please enter your choice: ");
 	
-	scanf("%d", &i);
-	switch(i){
+	scanf("%d", &choice);
+	switch(choice){
 	case 1:
 	    printf("Please enter a value: ");
 	    scanf("%d", &value);
 	    enqueue(queue, value);
-	    printf("The value you inserted to the queue was: %d\n\n", value);
+	    printf("The value you inserted to the queue was: %d\n", value);
 	    break;
 	    
 	case 2:
@@ -42,7 +42,7 @@ int main(){
 	    if (value == -1)
 		printf("The queue is empty so that you can't remove any value from it.\n");
 	    else
-		printf("The value deleted was: %d\n\n", value);
+		printf("The value deleted was: %d\n", value);
 	    break;
 	    
 	case 3:
@@ -57,7 +57,6 @@ int main(){
 	    break;
 	   
 	case 5:
-	    exit(0);
 	    break;
 	}
     }
