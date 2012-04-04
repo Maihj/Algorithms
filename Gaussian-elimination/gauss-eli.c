@@ -16,7 +16,13 @@ int main(){
 	    scanf("%f", &a[i][j]);
 	}
     }
-
+    for (i = 0; i < n; i++){
+	if (a[i][i] == 0){
+	    printf("Can't solve this linear equations by Gaussian-elimination.\n");
+	    return 1;
+	}
+    }
+    
     printf("please enter B: ");
     for (i = 0; i < n; i++){
 	scanf("%f", &b[i]);
