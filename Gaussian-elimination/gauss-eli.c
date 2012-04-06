@@ -16,12 +16,6 @@ int main(){
 	    scanf("%f", &a[i][j]);
 	}
     }
-    for (i = 0; i < n; i++){
-	if (a[i][i] == 0){
-	    printf("Can't solve this linear equations by Gaussian-elimination.\n");
-	    return 1;
-	}
-    }
     
     printf("please enter B: ");
     for (i = 0; i < n; i++){
@@ -29,6 +23,11 @@ int main(){
     }
 
     for (k = 0; k < n-1; k++){
+	/* the condition of Gaussian elimination. */
+	if (a[k][k] == 0){
+	    printf("Can't solve this linear equations by Gaussian-elimination.\n");
+	    return 1;
+	}
 	for (i = k+1; i < n; i++){
 	    l[i][k] = a[i][k] / a[k][k];
 	    c++;
