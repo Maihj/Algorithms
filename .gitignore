@@ -1,5 +1,7 @@
 .*~
-*.h~
-*.c~
 *.md~
-*~
+/Gaussian-elimination/*.c~
+/HebbianLearning/*.c~
+/MainElement-elimination/*.c~
+/queue/*.c~
+/stack/*.c~
