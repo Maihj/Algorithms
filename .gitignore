@@ -5,3 +5,7 @@
 /MainElement-elimination/*.c~
 /queue/*.c~
 /stack/*.c~
+/heap/*.c~
+/heap/*.h~
+/heap/*.o
+/heap/*~
