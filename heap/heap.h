@@ -11,5 +11,5 @@ void max_heapify(int *array, int *i, int *heap_size);
 /* build the max-heap */
 void build_max_heap(int *array);
 
-/* algorithm of heapsort */
+/* the algorithm of heapsort */
 void heapsort(int *array);
