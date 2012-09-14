@@ -1,4 +1,5 @@
-#include <stdio.h>
+#ifndef HEAPSORT_H
+#define HEAPSORT_H
 
 #define PARENT(i) (i) / 2         //i's parent
 #define LEFT(i)   (i) * 2         //i's leftchild
@@ -13,3 +14,5 @@ void build_max_heap(int *array);
 
 /* the algorithm of heapsort */
 void heapsort(int *array);
+
+#endif
