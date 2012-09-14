@@ -5,7 +5,7 @@ CFLAGS=-O -g -Wall
 test:$(OBJS)
 	$(CC) $(OBJS) -o test
 
-heap.o:heapsort.c heapsort.h
+heapsort.o:heapsort.c heapsort.h
 	$(CC) $(CFLAGS) -c heapsort.c -o heapsort.o
 
 test.o:test.c heapsort.h
